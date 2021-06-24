@@ -1,0 +1,31 @@
+
+@import '../../assets/css/utils.css';
+
+.body {
+    background: var(--color-svg-2);
+    margin: 1.5rem 2rem 2.5rem;
+    padding: 1.2rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 6px;
+    position: relative;
+}
+
+.body input, .body input::placeholder {
+    font-size: 1.5rem;
+    color: #6F798B;
+}
+
+.body div {
+    align-self: stretch;
+    padding: 0 2px 0 6px; 
+}
+.body svg::after{
+    position: absolute;
+    content: '';
+    height: 2rem;
+    width: 2rem;
+    background: red;
+    top: 0;
+}

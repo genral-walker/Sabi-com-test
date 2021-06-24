@@ -15,3 +15,4 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 <!-- Change the Theme colour to fit the app -->
 <!-- The serach bar should be able to work everywhere else too -->
 <!-- Add the time and battery bar to it if you have time -->
+<!-- Tell them that you didn't use scss just to be onj a safer side, but you always use it -->

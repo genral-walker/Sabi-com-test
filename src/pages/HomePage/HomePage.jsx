@@ -6,6 +6,7 @@ import Header from '../../components/Header/Header';
 import { ReactComponent as LocationLogo } from '../../assets/svgs/location.svg';
 import { ReactComponent as OrderLogo } from '../../assets/svgs/orders.svg';
 import { ReactComponent as CartLogo } from '../../assets/svgs/cart.svg';
+import SearchBar from '../../components/SearchBar/SearchBar';
 
 const HomePage = () => {
 
@@ -44,8 +45,9 @@ const HomePage = () => {
                     <p>Cart</p>
                 </div>
 
-
             </div>
+
+            <SearchBar />
 
         </div>
     );
