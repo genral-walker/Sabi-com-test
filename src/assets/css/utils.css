@@ -1,0 +1,21 @@
+
+
+/* /////// Variables  ///////// */
+:root {
+  --color-primary: #227eff;
+
+  --color-svg: #718596;
+  --color-svg-2: #edf2f7;
+
+  --color-white: #ffffff;
+  --color-dark: #212c3d;
+  --color-dark-2: #333333;
+
+  --color-main: #071827;
+  --color-orange: #ee6f44;
+  
+
+  /* --color-orange: #EE6F44; */
+}
+
+/* /////// Classes  ///////// */

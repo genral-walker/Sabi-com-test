@@ -1,0 +1,64 @@
+
+@import '../../assets/css/utils.css';
+
+
+.headNav {
+    padding: 1.2rem 1.5rem;
+    border-top: 1px solid var(--color-svg-2);
+    border-bottom: 1px solid var(--color-svg-2);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.headNav div {
+    flex: 0 0 33%;
+    padding: 0 1rem 0 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.headNav div p, .headNav div select {
+    font-size: 1.5rem;
+    color: var(--color-main);
+    margin-left: 1rem;
+}
+.headNav div select {
+    font-weight: 555;
+}
+
+.headNav div:nth-child(2) {
+    border-left: 1.7px solid var(--color-svg-2);
+    border-right: 1.7px solid var(--color-svg-2);
+}
+.headNav span {
+    padding: .7rem;
+    background: var(--color-svg-2);
+    display: grid;
+    align-items: center;
+    width: max-content;
+    border-radius: 100%;
+    position: relative !important;
+}
+.headNav svg {
+    height: 1.7rem;
+    width: 1.7rem;
+}
+.headNav .total {
+    padding: 0 0 .4rem;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    border-radius: 100%;
+    background: var(--color-orange);
+    color: var(--color-white);
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.headNav .total + p {
+    margin-left: 0;
+}
+
+
