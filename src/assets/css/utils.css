@@ -10,13 +10,15 @@
   --color-white: #ffffff;
   --color-dark: #212c3d;
   --color-dark-2: #333333;
+  --color-dark-3: #29394F;
 
   --color-main: #071827;
   --color-orange: #ee6f44;
-  
+  --color-green: #05944F;
+  --color-purple: #7E42F5;
   --color-grey: #627483;
 
-  /* --color-orange: #627483; */
+  /* --color-orange: #29394F; */
 }
 
 /* /////// Classes  ///////// */

@@ -1,0 +1,51 @@
+
+@import '../../assets/css/utils.css';
+
+.foot {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    background: var(--color-white);
+    padding: 1.5rem 3rem 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    box-shadow: 2px 2px 12px 5px var(--color-svg-2);
+}
+
+.foot > div {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.foot p {
+    font-size: 1.4rem;
+    margin-top: .5rem;
+}
+
+.foot > div:nth-child(2)::before {
+    position: absolute;
+    content: '';
+    top: -14px;
+    left: -10px;
+    height: 2px;
+    width: 50px;
+    background: var(--color-primary);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
