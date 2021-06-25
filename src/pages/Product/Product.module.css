@@ -1,0 +1,123 @@
+@import "../../assets/css/utils.css";
+
+.added {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #D3FDE9;
+    border: 1px solid #93ECC1;
+    border-radius: 4px;
+    padding: 1rem 1.5rem;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 92%;
+    margin: 0 1.5rem;
+    visibility: hidden;
+}
+
+.added p {
+    color: #023B20;
+}
+
+.image {
+  width: 100vw;
+  height: 30rem;
+  background: #e2e9f031;
+  padding: 2rem 3rem;
+}
+
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.info {
+  padding: 2rem 1.5rem 1.5rem;
+}
+
+.info > p:first-of-type {
+  color: var(--color-dark);
+}
+
+.info > span {
+  display: inline-block;
+  margin: 1.5rem 0 0;
+}
+
+.info h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  display: inline-block;
+}
+.info h3 + span {
+  font-size: 1.1rem;
+  color: var(--color-grey);
+  letter-spacing: 0.5px;
+}
+
+.description {
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 3px solid var(--color-svg-2);
+  border-bottom: 3px solid var(--color-svg-2);
+}
+
+.ratings {
+  padding: 1.7rem 1.5rem;
+}
+.ratings p {
+    color: var(--color-svg);
+  }
+.review {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.review h3:last-of-type {
+  color: var(--color-primary);
+}
+.stars {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 1.7rem 0;
+}
+.stars h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    transform: translateY(-2px);
+    margin-left: 6px;
+}
+
+.profile {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 1.5rem 0 0;
+}
+
+.profile h3 {
+    font-size: 1.24rem;
+    margin-left: 8px;
+    transform: translateY(2px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,55 @@
+
+@import '../../assets/css/utils.css';
+
+.nav {
+    padding: 1.2rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.nav span {
+    padding: .7rem;
+    background: var(--color-svg-2);
+    display: grid;
+    align-items: center;
+    width: max-content;
+    border-radius: 100%;
+    position: relative !important;
+}
+.nav > span:first-of-type {
+    border-radius: 4px;
+    padding: .6rem .8rem;
+}
+
+.nav p {
+    color: var(--color-dark);
+}
+.cart {
+    flex: 0 0 19%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.search {
+display: flex;
+align-items: center;
+position: relative;
+right: -10px;
+}
+
+.search .total {
+    padding: 0 0 .4rem;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    border-radius: 100%;
+    background: var(--color-orange);
+    color: var(--color-white);
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
