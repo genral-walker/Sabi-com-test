@@ -1,0 +1,74 @@
+
+@import "../../assets/css/utils.css";
+
+.body {
+  background: var(--color-white);
+  width: 100%;
+  margin-bottom: 1.3rem;
+  padding: .8rem 1.5rem 1.2rem;
+  overflow: hidden;
+}
+.body:last-of-type {
+  margin-bottom: 0;
+}
+
+.top {
+  padding-bottom: 0.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid var(--color-svg-2);
+  padding-bottom: 1rem;
+}
+.top h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+img {
+  height: 4.5rem;
+  width: 4.5rem;
+  border-radius: 5px;
+  margin-right: 1.3rem;
+}
+
+
+
+.bottom {
+  padding-top: .7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bottom > div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.bottom > div:first-of-type svg {
+    margin-right: 1rem;
+}
+.bottom > div:last-of-type svg {
+   width: 2.5rem;
+   height: 2.5rem;
+}
+
+.bottom p {
+    color: var(--color-main);
+    font-size: 1.2rem;
+}
+
+.bottom > div:last-of-type p {
+    color: var(--color-main);
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0 .7rem;
+}
+
+
+
+
+
+
+

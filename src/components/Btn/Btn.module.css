@@ -3,7 +3,7 @@
 
 .btn {
   padding: 1.2rem 2.5rem;
-  color: var(--color-white);
+  color: var(--color-main);
   background: var(--color-primary);
   border-radius: 4.5px;
   cursor: pointer;
@@ -15,10 +15,13 @@
 }
 
 .banner {
+  color: var(--color-white);
   font-size: 1.4rem;
   font-weight: 300;
 }
 
 .inverted {
-  
+ background: var(--color-white); 
+ color: var(--color-main);
+ border: 1px solid var(--color-svg);
 }

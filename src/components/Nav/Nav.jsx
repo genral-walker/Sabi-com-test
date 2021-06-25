@@ -12,10 +12,10 @@ const Nav = ({ page }) => {
         <nav className={styles.nav}>
 
             <span><BackLogo /></span>
-            
-            <p>{page}</p>
 
-            <div className={styles.cart}>
+            <p style={{marginLeft: page === 'Carts' ? '4.5rem': 0}}>{page}</p>
+
+            <div className={styles.cart} style={{visibility: page === 'Carts' ? 'hidden': 'visible'}}>
                  <span><SearchLogo /></span>
 
                 <div className={styles.search}>

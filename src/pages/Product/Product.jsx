@@ -26,12 +26,12 @@ const Product = ({ productName }) => {
             </div>
 
 
-            <div className={styles.image}>
+            <section className={styles.image}>
                 <img src={productImg} alt={productName} />
-            </div>
+            </section>
 
 
-            <div className={styles.info}>
+            <section className={styles.info}>
                 <p>NIKE Huararche 2019</p>
                 <p>Get comfy and comfortable with the new 2019 designer
                     sneaker for all your events </p>
@@ -39,16 +39,16 @@ const Product = ({ productName }) => {
                 <span>
                     <h3>N45,000 - N80,000</h3> <span>/Piece</span>
                 </span>
-            </div>
+            </section>
 
 
-            <div className={styles.description}>
+            <section className={styles.description}>
                 <HeaderSecondary>Product Description</HeaderSecondary>
                 <ForwardLogo />
-            </div>
+            </section>
 
 
-            <div className={styles.ratings}>
+            <section className={styles.ratings}>
                 <div className={styles.review}>
                     <HeaderSecondary>Review and Ratings</HeaderSecondary>
                     <HeaderSecondary>View all</HeaderSecondary>
@@ -73,7 +73,7 @@ const Product = ({ productName }) => {
                     <img src={profile} alt='reviewer Profile' />
                     <HeaderSecondary>Segun Arinze</HeaderSecondary>
                 </div>
-            </div>
+            </section>
 
             <ButtonsFooter />
         </>

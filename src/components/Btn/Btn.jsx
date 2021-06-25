@@ -12,6 +12,7 @@ const Btn = ({ children, type }) => {
 
             case 'inverted':
                 return `${styles.btn} ${styles.inverted}`
+
             default:
                 return `${styles.btn}`
         }

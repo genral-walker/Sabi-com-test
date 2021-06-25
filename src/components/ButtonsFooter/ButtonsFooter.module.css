@@ -1,2 +1,24 @@
 
 @import '../../assets/css/utils.css';
+
+.body {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    padding: 1.5rem;  
+    background: var(--color-white);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    box-shadow: 2px -13px 12px 5px var(--color-svg-2);
+}
+
+
+.body button {
+    width: 49%;
+}
+
+.body button:first-of-type h3 {
+    color: var(--color-white);
+}

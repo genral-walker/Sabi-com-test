@@ -12,6 +12,7 @@ Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 <!-- CODE ADD TO CART POPUP and remove popup -->
+<!-- Check on mobile if there's enough space when at bottom -->
 <!-- Insert a logo in the head tag -->
 <!-- Change the Theme colour to fit the app -->
 <!-- The serach bar should be able to work everywhere else too -->

@@ -27,3 +27,57 @@
     font-weight: 600;
     margin: .5rem 0;
 }
+
+
+
+@media only screen and (max-width: 453px) {
+
+    .image {
+        height: 45%;
+    }
+    .details h3 {
+        font-size: 1.6rem;
+    }
+}
+
+@media only screen and (max-width: 393px) {
+    .cart {
+        height: max-content;
+    }
+    .details h3 {
+        font-size: 1.4rem;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .details h3 {
+        font-size: 1.3rem;
+    }
+    .details p {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .details p:last-of-type {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .details h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 317px) {
+    .details p:first-of-type {
+        font-size: 1.1rem;
+    }
+}
+
+
+
+
+
+

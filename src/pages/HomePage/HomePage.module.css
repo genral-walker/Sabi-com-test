@@ -115,7 +115,9 @@
     overflow-x: hidden;
 }
 
-
+.body main {
+    margin-bottom: 8.5rem;
+}
 
 
 
