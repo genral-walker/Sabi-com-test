@@ -78,6 +78,11 @@
   justify-content: space-between;
   align-items: center;
 }
+.ratings img {
+  height: 33px;
+  width: 33px;
+ border-radius: 100%;
+}
 .review h3:last-of-type {
   color: var(--color-primary);
 }
@@ -104,7 +109,6 @@
 
 .profile h3 {
     font-size: 1.24rem;
-    margin-left: 8px;
     transform: translateY(2px);
 }
 

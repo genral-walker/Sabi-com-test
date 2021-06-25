@@ -9,7 +9,7 @@ import HeaderSecondary from '../../components/HeaderSecondary/HeaderSecondary';
 import { ReactComponent as ForwardLogo } from '../../assets/svgs/forward.svg';
 import { ReactComponent as StarYellow } from '../../assets/svgs/star-yellow.svg';
 import { ReactComponent as StarLogo } from '../../assets/svgs/star.svg';
-import profile from '../../assets/images/profile.jpg';
+import profile from '../../assets/images/sneaker-2.jpg';
 import { ReactComponent as CancelLogo } from '../../assets/svgs/cancel.svg'; 
 import ButtonsFooter from '../../components/ButtonsFooter/ButtonsFooter'; 
 
