@@ -20,3 +20,4 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 <!-- Tell them that you didn't use scss just to be onj a safer side, but you always use it -->
 <!-- You can style the header well later with the both sides -->
 <!-- SHould be able to saerch from every page -->
+<!-- I truncated the strings -->

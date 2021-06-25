@@ -99,15 +99,9 @@ const HomePage = () => {
 
 
                 <section className={styles.carts}>
-                    <Cart />
-                    <Cart />
-                    <Cart />
-                    <Cart />
-                    <Cart />
-                    <Cart />
-                    <Cart />
-                    <Cart />
-                    <Cart />
+                    <Cart description='Get comfy and comfortable with the new 2019 designer sneaker for all your events'/>
+                    <Cart description='walker amen is the exponnetial duess and craps' />
+                    <Cart description='walker tried this mhen'/>
                 </section>
             </main>
 

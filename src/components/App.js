@@ -14,10 +14,10 @@ export default function App() {
   return (
     <>
       <Switch>
-        {/* <Route exact path='/' component={HomePage}/> */}
+        <Route exact path='/' component={HomePage}/>
         {/* <Route exact path='/' component={Product}/> */}
         {/* <Route exact path='/' component={CartPage}/> */}
-        <Route exact path='/' component={CheckOut}/>
+        {/* <Route exact path='/' component={CheckOut}/> */}
       </Switch>
     </>
 

@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './CartItem.module.css';
 
 
-import cartFoto from '../../assets/images/sneaker-3.jpg';
+import cartFoto from '../../assets/images/cart-3.jpg';
 import HeaderSecondary from '../../components/HeaderSecondary/HeaderSecondary';
 
 import { ReactComponent as Delete } from '../../assets/svgs/delete.svg';
