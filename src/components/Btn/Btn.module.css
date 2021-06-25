@@ -1,5 +1,4 @@
-
-@import '../../assets/css/utils.css';
+@import "../../assets/css/utils.css";
 
 .btn {
   padding: 1.2rem 2.5rem;
@@ -7,7 +6,7 @@
   background: var(--color-primary);
   border-radius: 4.5px;
   cursor: pointer;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   transition: 0.2s ease;
 }
 .btn:active {
@@ -21,7 +20,26 @@
 }
 
 .inverted {
- background: var(--color-white); 
- color: var(--color-main);
- border: 1px solid var(--color-svg);
+  background: var(--color-white);
+  color: var(--color-main);
+  border: 1px solid var(--color-svg);
+}
+
+@media only screen and (max-width: 384px) {
+  .banner {
+    font-size: 1.2rem;
+    padding: 1.2rem 2rem;
+  }
+}
+
+@media only screen and (max-width: 342px) {
+  .banner {
+    padding: 1rem 1.7rem;
+  }
+}
+
+@media only screen and (max-width: 328px) {
+  .banner {
+    padding: 1rem 1.5rem;
+  }
 }

@@ -30,7 +30,7 @@
 
 
 
-@media only screen and (max-width: 453px) {
+@media only screen and (max-width: 462px) {
 
     .image {
         height: 45%;
@@ -40,7 +40,7 @@
     }
 }
 
-@media only screen and (max-width: 393px) {
+@media only screen and (max-width: 402px) {
     .cart {
         height: max-content;
     }
@@ -49,22 +49,20 @@
     }
 }
 
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 360px) {
     .details h3 {
         font-size: 1.3rem;
     }
     .details p {
         font-size: 1.2rem;
     }
-}
-
-@media only screen and (max-width: 350px) {
-    .details p:last-of-type {
+     .details p:last-of-type {
         font-size: 1rem;
     }
 }
 
-@media only screen and (max-width: 320px) {
+
+@media only screen and (max-width: 330px) {
     .details h3 {
         font-size: 1.2rem;
     }

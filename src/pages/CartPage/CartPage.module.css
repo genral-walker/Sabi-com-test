@@ -6,56 +6,60 @@
 }
 
 .total {
-    padding: 2rem 1.5rem;
-    border-bottom: 2px solid var(--color-svg-2);
+  padding: 2rem 1.5rem;
+  border-bottom: 2px solid var(--color-svg-2);
 }
 
-.total > div, .viewed > div:first-of-type{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.total > div,
+.viewed > div:first-of-type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .total > div:first-of-type {
-    margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 .total > div span {
-    font-size: 1.3rem;
-    font-weight: 600;
+  font-size: 1.3rem;
+  font-weight: 600;
 }
 
 .total button {
-    width: 100%;
-    margin-top: 2rem;
+  width: 100%;
+  margin-top: 2rem;
 }
 
-
-
 .viewed {
-    padding: 2rem 1.5rem;
-    margin-bottom: 8rem;
+  padding: 2rem 1.5rem;
+  margin-bottom: 8rem;
 }
 
 .viewed div:first-of-type span {
-    color: var(--color-primary);
+  color: var(--color-primary);
 }
 
 .viewed > div:last-of-type {
-    margin-top: 1.5rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem;
-    height: max-content
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  height: max-content;
 }
-
 
 @media only screen and (max-width: 453px) {
-    .viewed > div:last-of-type {
-        row-gap: 1rem;
-    }
+  .viewed > div:last-of-type {
+    row-gap: 1rem;
+  }
 }
 @media only screen and (max-width: 393px) {
-    .viewed > div:last-of-type {
-        column-gap: 1.5rem;
-        row-gap: 2.3rem;
-    }
+  .viewed > div:last-of-type {
+    column-gap: 1.5rem;
+    row-gap: 2rem;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .viewed > div:last-of-type {
+    column-gap: 1.1rem;
+  }
 }

@@ -107,18 +107,114 @@
 
 
 .carts {
-    width: 100vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
-    padding: 0 2rem;
-    overflow-x: hidden;
+    padding: 0 2rem 2rem;
+    height: max-content
+
 }
 
 .body main {
     margin-bottom: 8.5rem;
 }
 
+
+
+@media only screen and (max-width: 470px) {
+    .headNav div p, .headNav div select {
+        font-size: 1.3rem;
+    }
+}
+
+@media only screen and (max-width: 453px) {
+    .carts {
+        row-gap: 1rem;
+    }
+}
+
+@media only screen and (max-width: 438px) {
+    .headNav {
+        padding: 1.2rem .5rem;
+    }
+    .headNav div {
+        padding: 0 1rem 0 1rem;
+    }
+
+    .alerts svg {
+        width: 2rem;
+        height: 2rem;
+    }
+    .pop1, .pop2, .pop3, .pop4 {
+        padding: .8rem 1rem;
+    }
+}
+
+@media only screen and (max-width: 402px) {
+    .headNav {
+        padding: 1.2rem 0;
+    }
+    .carts {
+        column-gap: 1.5rem;
+        row-gap: 2.3rem;
+    }
+    .alerts p {
+        font-size: 1.3rem;
+    }
+}
+@media only screen and (max-width: 393px) {
+    .headNav div:nth-of-type(2){
+        flex: 0 0 35%;
+    }
+   .headNav div p, .headNav div select {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 358px) {
+    .headNav div:nth-of-type(2) p{
+        font-size: 1rem;
+    }
+    .headNav div:nth-of-type(3) p{
+        margin-left: -.5rem;
+    }
+   .headNav div p, .headNav div select {
+        font-size: 1.1rem;
+        margin-left: .5rem;
+    }
+
+    .headNav svg {
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+
+    .alerts p {
+        font-size: 1.1rem;
+    }
+}
+@media only screen and (max-width: 346px) {
+    .headNav {
+        padding: .8rem 0;
+    }
+    .headNav div {
+        padding: 0 1rem 0 .5rem;
+    }
+    .headNav div:nth-of-type(1) {
+      margin-left: .3rem;
+    }
+    .headNav svg {
+        height: 1.4rem;
+        width: 1.4rem;
+    }
+}
+@media only screen and (max-width: 340px) {
+    .carts {
+        column-gap: 1.1rem;
+    }
+    .alerts {
+        padding-left: 1.7rem;
+    }
+}
 
 
 

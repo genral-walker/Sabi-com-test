@@ -1,4 +1,3 @@
-
 @import "../../assets/css/utils.css";
 
 .body {
@@ -31,7 +30,6 @@
   transform: translateY(-3px);
 }
 
-
 .slide1 {
   background: linear-gradient(
     43deg,
@@ -45,7 +43,6 @@
   color: var(--color-orange);
 }
 
-
 .slide2 {
   background: var(--color-orange);
 }
@@ -56,7 +53,6 @@
   background: cornsilk;
   color: var(--color-dark);
 }
-
 
 .slide3 {
   background: var(--color-primary);
@@ -71,3 +67,22 @@
 
 
 
+@media only screen and (max-width: 437px) {
+  .body {
+    padding: 0 2rem;
+  }
+  .slider div h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 382px) {
+  .slider {
+    height: 13rem;
+  }
+}
+@media only screen and (max-width: 328px) {
+  .slider div h2 {
+    font-size: 1.3rem;
+  }
+}
