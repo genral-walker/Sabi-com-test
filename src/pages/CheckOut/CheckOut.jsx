@@ -7,24 +7,14 @@ import Header from '../../components/Header/Header';
 import HeaderSecondary from '../../components/HeaderSecondary/HeaderSecondary';
 
 import success from '../../assets/images/success.jpg';
+import { images, products } from '../../static';
 
-import uuid from 'react-uuid';
 
 
 const CheckOut = () => {
 
-    
-    useEffect(()=>{
-        const products = [{
-            id: uuid(),
-            title: 'NIKE',
-            name: 'NIKE Huararche 2019',
-            description: 'Get comfy and comfortable with the new 2019 designer sneaker for all your events',
-            image: 'some_image_link',
-            price: '45, 000 - 90, 000',
-            location: 'Lagos',
-            stock: 5
-        }];
+    useEffect(() => {
+       
         console.log(products);
     }, [])
 

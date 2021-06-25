@@ -1,0 +1,9 @@
+
+const searchActionTypes = {
+  SEARCH_PRODUCT: 'SEARCH_PRODUCT',
+  SEARCH_BY_STATE: 'SEARCH_BY_STATE',
+  UPDATE_SEARCH: 'UPDATE_SEARCH',
+  UPDATE_LOCATION: 'UPDATE_LOCATION'
+};
+
+export default searchActionTypes;

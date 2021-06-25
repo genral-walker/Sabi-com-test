@@ -1,9 +1,9 @@
 
 import { combineReducers } from 'redux';
-import heroReducer from './hero/heroReducer';
+import searchReducer from './search/searchReducer';
 
 const rootReducer = combineReducers({
-  hero: heroReducer,
+  search: searchReducer,
 });
 
 

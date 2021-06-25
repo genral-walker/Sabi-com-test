@@ -21,3 +21,4 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 <!-- You can style the header well later with the both sides -->
 <!-- SHould be able to saerch from every page -->
 <!-- I truncated the strings -->
+<!-- Check for stcoks too when adding -->

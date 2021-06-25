@@ -15,6 +15,7 @@
 .body input::placeholder {
   font-size: 1.5rem;
   color: #6f798b;
+  flex: 0 0 90%;
 }
 
 .body div {
