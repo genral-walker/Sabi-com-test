@@ -1,25 +1,27 @@
 
-import React from 'react';
+import React, { useRef } from 'react';
 import styles from './SearchBar.module.css';
 
 import { ReactComponent as SearchLogo } from '../../assets/svgs/search.svg';
-import { useSelector, useDispatch } from 'react-redux';
-import searchActionTypes from '../../redux/search/search.types';
+
+import { useDispatch } from 'react-redux';
+import { searchProduct } from '../../redux/search/searchActions';
 
 
 const SearchBar = () => {
 
     const dispatch = useDispatch();
+    const inputRef = useRef();
 
     const getValue = (event) => {
         event.preventDefault();
-        // let val = event.target.value;
-        dispatch({type: searchActionTypes.UPDATE_SEARCH});
+        dispatch(searchProduct(inputRef.current.value));
+        event.target.reset();
     };
 
     return (
         <form className={styles.body} onSubmit={getValue}>
-            <input placeholder='Search merchbuy' />
+            <input ref={inputRef} placeholder='Search merchbuy' />
             <button type='submit'><SearchLogo /></button>
         </form>
     )

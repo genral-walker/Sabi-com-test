@@ -1,5 +1,5 @@
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import styles from './CheckOut.module.css';
 
 import Btn from '../../components/Btn/Btn';
@@ -7,16 +7,13 @@ import Header from '../../components/Header/Header';
 import HeaderSecondary from '../../components/HeaderSecondary/HeaderSecondary';
 
 import success from '../../assets/images/success.jpg';
-import { images, products } from '../../static';
+import { useHistory } from 'react-router-dom';
 
 
 
 const CheckOut = () => {
 
-    useEffect(() => {
-       
-        console.log(products);
-    }, [])
+    const history = useHistory();
 
     return (
 
@@ -28,11 +25,14 @@ const CheckOut = () => {
                 <p>Your checkout is now successful.</p>
             </div>
 
+            <span onClick={()=> history.push('/')}>
             <Btn>
                 <HeaderSecondary>
                     <span>Got it</span>
                 </HeaderSecondary>
             </Btn>
+            </span>
+           
         </div>
     )
 }

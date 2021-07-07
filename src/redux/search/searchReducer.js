@@ -1,34 +1,38 @@
 
-import searchActionTypes from './search.types';
-import { searchByName, searchByLocation, updateLocation, updateSearch } from './search.utils';
+import searchActionTypes from './searchActionTypes';
+import { productSearched, searchByState } from './searchUtils';
 import { products } from '../../static';
 
 
 const INITIAL_STATE = {
-  products: products,
-  search: '',
-  location: ''
+  products,
+  currentLocation: 'all',
+  filteredProducts: products
 };
 
-const searchReducer = (state = INITIAL_STATE, action) => {
-  switch (action.type) {
+const searchReducer = (state = INITIAL_STATE, { type, payload }) => {
+
+  switch (type) {
 
     case searchActionTypes.SEARCH_PRODUCT:
-      searchByName(state.text, state.products);
-      break;
+      return {
+        ...state,
+        filteredProducts: productSearched(state.products, payload, state.currentLocation)
+      }
 
     case searchActionTypes.SEARCH_BY_STATE:
-      searchByLocation(state.location, state.products);
-      break;
+      return {
+        ...state,
+        currentLocation: payload,
+        filteredProducts: searchByState(state.products, payload)
+      }
 
-    case searchActionTypes.UPDATE_SEARCH:
-      updateSearch(state.text);
-      return state.products;
-      break;
-
-    case searchActionTypes.UPDATE_LOCATION:
-      updateLocation(state.location);
-      break;
+    case searchActionTypes.REFRESH_PRODUCTS:
+      return {
+        ...state,
+        currentLocation: 'all',
+        filteredProducts: state.products
+      }
 
     default:
       return state;

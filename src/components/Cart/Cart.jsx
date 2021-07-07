@@ -1,29 +1,31 @@
 
-import React, { useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './Cart.module.css';
+import { useHistory } from 'react-router-dom';
 
-import {images, products} from '../../static';
 
+const Cart = (props) => {
 
-const Cart = ({ description }) => {
+    const history = useHistory();
+    const { title, name, description, image, price, stock } = props;
 
-    const [text, setText] = useState();
+    const [trimmedText, setTrimmedText] = useState();
 
     useEffect(() => {
-        let str = products[0].description.split(' ');
-        let news = str.length <= 6 ? str.join(' ')+'.' : str.splice(0, 6).join(' ')+'...';
-        setText(news)
-    }, [])
+        let str = description.split(' ');
+        let newText = str.length <= 6 ? str.join(' ') + '.' : str.splice(0, 6).join(' ') + '...';
+        setTrimmedText(newText);
+    }, [description])
 
     return (
-        <div className={styles.cart}>
+        <div className={styles.cart} onClick={() => history.push('/product')}>
             <div className={styles.image}>
-                <img src={products[0].image} alt='Cart Item' />
+                <img src={image} alt={`${title} ${name} Cart Item`} />
             </div>
             <div className={styles.details}>
-                <p>{text}</p>
-                <h3>{products[0].price}</h3>
-                <p>MOQ {products[0].stock} (pieces)</p>
+                <p>{trimmedText}</p>
+                <h3>₦{price}</h3>
+                <p>MOQ {stock} (pieces)</p>
             </div>
         </div>
     )

@@ -16,9 +16,5 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 <!-- Insert a logo in the head tag -->
 <!-- Change the Theme colour to fit the app -->
 <!-- The serach bar should be able to work everywhere else too -->
-<!-- Add the time and battery bar to it if you have time -->
-<!-- Tell them that you didn't use scss just to be onj a safer side, but you always use it -->
-<!-- You can style the header well later with the both sides -->
 <!-- SHould be able to saerch from every page -->
-<!-- I truncated the strings -->
 <!-- Check for stcoks too when adding -->

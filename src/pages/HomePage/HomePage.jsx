@@ -1,6 +1,8 @@
 
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import styles from './HomePage.module.css';
+
+import { useHistory } from 'react-router-dom';
 
 import Header from '../../components/Header/Header';
 
@@ -18,9 +20,32 @@ import { ReactComponent as ShopLogo } from '../../assets/svgs/shop.svg';
 
 import Cart from '../../components/Cart/Cart';
 import Foot from '../../components/Foot/Foot';
+import Btn from '../../components/Btn/Btn';
+
+import { useDispatch, useSelector } from 'react-redux';
+import { refreshProducts } from '../../redux/search/searchActions';
+import { searchByState } from '../../redux/search/searchActions';
 
 
 const HomePage = () => {
+
+    const history = useHistory();
+    const filteredProducts = useSelector(state => state.search.filteredProducts);
+    const selectedLocation = useSelector(state => state.search.currentLocation);
+    const dispatch = useDispatch();
+    const selectRef = useRef();
+
+
+    useEffect(() => {
+        // RESET STATES SELECT FILTER
+        for (const opt of selectRef.current.options) {
+            opt.removeAttribute('selected');
+            if (opt.value === selectedLocation) {
+                opt.setAttribute('selected', '');
+            }
+        }
+
+    }, [selectedLocation])
 
     return (
         <div className={styles.body}>
@@ -31,19 +56,13 @@ const HomePage = () => {
                 <nav className={styles.headNav}>
 
                     <div>
-                        <span> <LocationLogo /></span>
-                        <select>
+                        <span><LocationLogo /></span>
+                        <select ref={selectRef} onChange={(e) => dispatch(searchByState(e.target.value))}>
                             <option value="all">Locations</option>
                             <option value="abuja">Abuja</option>
-                            <option value="lagos">Lagos</option>
-                            <option value="benin">Benin</option>
-                            <option value="kogi">Kogi</option>
-                            <option value="rivers">Rivers</option>
                             <option value="delta">Delta</option>
-                            <option value="niger">Niger</option>
+                            <option value="lagos">Lagos</option>
                             <option value="kano">Kano</option>
-                            <option value="benue">Benue</option>
-                            <option value="jos">Jos</option>
                         </select>
                     </div>
 
@@ -52,7 +71,7 @@ const HomePage = () => {
                         <p>My Orders</p>
                     </div>
 
-                    <div>
+                    <div onClick={() => history.push('/cart-page')}>
                         <span> <CartLogo /></span>
                         <span className={styles.total}>9</span>
                         <p>Cart</p>
@@ -99,12 +118,16 @@ const HomePage = () => {
 
 
                 <section className={styles.carts}>
-                    <Cart description='Get comfy and comfortable with the new 2019 designer sneaker for all your events'/>
-                    <Cart description='walker amen is the exponnetial duess and craps' />
-                    <Cart description='walker tried this mhen'/>
-                    <Cart description='walker tried this mhen'/>
-                    <Cart description='walker tried this mhen'/>
-                    <Cart description='walker tried this mhen'/>
+                    {
+                        filteredProducts !== undefined && filteredProducts.length ?
+                            filteredProducts.map(data => <Cart {...data} key={data.id} />) :
+                            <div style={{ gridColumn: '1 / -1', margin: '1.5rem auto 2.5rem' }}>
+                                <Header>
+                                    <span style={{ marginRight: '1.5rem' }}>Sorry, No Such Product Found 😢</span>
+                                    <span onClick={() => dispatch(refreshProducts())}><Btn type='banner'>OK</Btn></span>
+                                </Header>
+                            </div>
+                    }
                 </section>
             </main>
 

@@ -4,34 +4,31 @@ export const products = [
     {
         "id": "74bde35-26c0-5d8b-f65-38dbcf4befcf",
         "title": "SANDALS",
-        "name": "Yexzy 4",
+        "name": "Trarex Y Undone",
         "description": "Apparel product. Comes with warranty and delivery to your destination.",
         "image": "https://github.com/genral-walker/9ijakids-Game-List/blob/main/src/static/cart-6.jpg?raw=true",
-        "price": "₦34, 000 - ₦82, 000",
         "location": "lagos",
-        "realPrice": 31000,
+        "price": 1000,
         "stock": 11
     },
     {
-        "id": "74bde35-26c0-5d8b-f65-38dbcf4befcf",
+        "id": "74bde35-26c0-5d8b-f65-38dbcf4befrgeefwef",
         "title": "SANDALS",
         "name": "Yexzy 4",
         "description": "Apparel product. Comes with warranty and delivery to your destination.",
         "image": "https://github.com/genral-walker/9ijakids-Game-List/blob/main/src/static/cart-6.jpg?raw=true",
-        "price": "₦34, 000 - ₦62, 000",
-        "location": "lagos",
-        "realPrice":  54000,
+        "location": "abuja",
+        "price": 5400,
         "stock": 11
     },
     {
-        "id": "74bde35-26c0-5d8b-f65-38dbcf4befcf",
+        "id": "74bde35-26c0-5d8b-f65-38dbcf4bcfffef",
         "title": "SANDALS",
         "name": "Yexzy 4",
         "description": "Apparel product. Comes with warranty and delivery to your destination.",
         "image": "https://github.com/genral-walker/9ijakids-Game-List/blob/main/src/static/cart-6.jpg?raw=true",
-        "price": "₦32, 000 - ₦52, 000",
         "location": "lagos",
-        "realPrice": 42000,
+        "price": 4200,
         "stock": 11
     },
     {
@@ -40,9 +37,8 @@ export const products = [
         "name": "Puma yeexy x",
         "description": "The new 2019 product yet to see",
         "image": "https://github.com/genral-walker/9ijakids-Game-List/blob/main/src/static/cart-2.jpg?raw=true",
-        "price": "₦12, 000 - ₦24, 000",
         "location": "lagos",
-        "realPrice": 14000,
+        "price": 14000,
         "stock": 8
     },
     {
@@ -51,9 +47,8 @@ export const products = [
         "name": "Nontanomo expose",
         "description": "Redeine your space with this new product that encompasses all your needs in this space of yours.",
         "image": "https://github.com/genral-walker/9ijakids-Game-List/blob/main/src/static/cart-10.jpg?raw=true",
-        "price": "₦23, 000 - ₦35, 000",
         "location": "lagos",
-        "realPrice": 30000,
+        "price": 3000,
         "stock": 17
     },
     {
@@ -62,9 +57,8 @@ export const products = [
         "name": "Yexzy 4",
         "description": "Designer sneaker for all your events",
         "image": "https://github.com/genral-walker/9ijakids-Game-List/blob/main/src/static/cart-1.jpg?raw=true",
-        "price": "₦34, 000 - ₦62, 000",
         "location": "lagos",
-        "realPrice": 45600,
+        "price": 1600,
         "stock": 35
     },
     {
@@ -73,9 +67,8 @@ export const products = [
         "name": "Yexzy 4",
         "description": "Affordable product for you",
         "image": "https://github.com/genral-walker/9ijakids-Game-List/blob/main/src/static/cart-5.jpg?raw=true",
-        "price": "₦34, 000 - ₦50, 000",
         "location": "lagos",
-        "realPrice": 45000,
+        "price": 450,
         "stock": 9
     },
     {
@@ -84,9 +77,8 @@ export const products = [
         "name": "Nontanomo expose",
         "description": "Designer sneaker for all your events",
         "image": "https://github.com/genral-walker/9ijakids-Game-List/blob/main/src/static/cart-1.jpg?raw=true",
-        "price": "₦10, 000 - ₦23, 000",
         "location": "lagos",
-        "realPrice": 17000,
+        "price": 1700,
         "stock": 33
     },
     {
@@ -95,9 +87,8 @@ export const products = [
         "name": "Hulu 12 2017",
         "description": "Get comfy and comfortable with the new 2019 designer",
         "image": "https://github.com/genral-walker/9ijakids-Game-List/blob/main/src/static/cart-6.jpg?raw=true",
-        "price": "₦74, 000 - ₦87, 000",
         "location": "abuja",
-        "realPrice": 77540,
+        "price": 750,
         "stock": 26
     },
     {
@@ -106,20 +97,18 @@ export const products = [
         "name": "Hulu 12 2017",
         "description": "Designer sneaker for all your events",
         "image": "https://github.com/genral-walker/9ijakids-Game-List/blob/main/src/static/cart-11.jpg?raw=true",
-        "price": "₦45, 000 - ₦90, 000",
         "location": "abuja",
-        "realPrice": 85600,
+        "price": 8600,
         "stock": 28
     },
     {
         "id": "0b686ea-f3b4-2134-f57b-7b4c6f885f28",
         "title": "HENTRO",
-        "name": "Yexzy 4",
+        "name": "Ultra Space Aparthied",
         "description": "The new 2019 product yet to see",
         "image": "https://github.com/genral-walker/9ijakids-Game-List/blob/main/src/static/cart-6.jpg?raw=true",
-        "price": "₦34, 000 - ₦72, 000",
         "location": "abuja",
-        "realPrice": 64300,
+        "price": 4300,
         "stock": 18
     },
     {
@@ -128,9 +117,8 @@ export const products = [
         "name": "Puma yeexy x",
         "description": "Apparel product. Comes with warranty and delivery to your destination.",
         "image": "https://github.com/genral-walker/9ijakids-Game-List/blob/main/src/static/cart-11.jpg?raw=true",
-        "price": "₦25, 000 - ₦50, 000",
         "location": "abuja",
-        "realPrice": 37600,
+        "price": 300,
         "stock": 8
     },
     {
@@ -139,9 +127,8 @@ export const products = [
         "name": "Nontanomo expose",
         "description": "Designer sneaker for all your events",
         "image": "https://github.com/genral-walker/9ijakids-Game-List/blob/main/src/static/cart-10.jpg?raw=true",
-        "price": "₦45, 000 - ₦90, 000",
         "location": "kano",
-        "realPrice": 53500,
+        "price": 3500,
         "stock": 4
     },
     {
@@ -150,42 +137,38 @@ export const products = [
         "name": "Puma yeexy x",
         "description": "Designer sneaker for all your events",
         "image": "https://github.com/genral-walker/9ijakids-Game-List/blob/main/src/static/cart-10.jpg?raw=true",
-        "price": "₦34, 000 - ₦50, 000",
         "location": "kano",
-        "realPrice": 43000,
+        "price": 4000,
         "stock": 34
     },
     {
         "id": "5bf151-264b-a02d-04be-18d418bf8a0",
         "title": "PUMA",
-        "name": "Yexzy 4",
+        "name": "Beever Ultimate",
         "description": "The new 2019 product yet to see",
         "image": "https://github.com/genral-walker/9ijakids-Game-List/blob/main/src/static/cart-6.jpg?raw=true",
-        "price": "₦34, 000 - ₦62, 000",
         "location": "kano",
-        "realPrice": 37000,
+        "price": 370,
         "stock": 28
     },
     {
         "id": "62b731b-d20-ba65-73d-3aeb4b1f1d1",
         "title": "SOCKS",
-        "name": "Yexzy 4",
+        "name": "Beever Overdawn",
         "description": "The new 2019 product yet to see",
         "image": "https://github.com/genral-walker/9ijakids-Game-List/blob/main/src/static/cart-6.jpg?raw=true",
-        "price": "₦45, 000 - ₦76, 000",
         "location": "kano",
-        "realPrice": 63000,
+        "price": 6000,
         "stock": 23
     },
     {
         "id": "ab13c8-d23-3de8-cd4d-eb36231353",
         "title": "COKE",
-        "name": "Yexzy 4",
+        "name": "Trarex X20",
         "description": "The new 2019 product yet to see",
         "image": "https://github.com/genral-walker/9ijakids-Game-List/blob/main/src/static/cart-11.jpg?raw=true",
-        "price": "₦10, 000 - ₦23, 000",
         "location": "delta",
-        "realPrice": 14700,
+        "price": 14700,
         "stock": 8
     },
     {
@@ -194,9 +177,8 @@ export const products = [
         "name": "Nontanomo expose",
         "description": "Redeine your space with this new product that encompasses all your needs in this space of yours.",
         "image": "https://github.com/genral-walker/9ijakids-Game-List/blob/main/src/static/cart-10.jpg?raw=true",
-        "price": "₦34, 000 -₦50, 000",
         "location": "delta",
-        "realPrice": 47000,
+        "price": 4700,
         "stock": 12
     },
     {
@@ -205,10 +187,12 @@ export const products = [
         "name": "Nontanomo expose",
         "description": "Get comfy and comfortable with the new 2019 designer",
         "image": "https://github.com/genral-walker/9ijakids-Game-List/blob/main/src/static/cart-7.jpg?raw=true",
-        "price": "₦24, 000 - ₦45, 000",
         "location": "delta",
-        "realPrice": 34700,
+        "price": 3700,
         "stock": 3
     }
 ];
+
+
+
 

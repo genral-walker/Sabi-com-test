@@ -2,11 +2,15 @@
 import React from 'react';
 import styles from './Nav.module.css';
 
+import {useHistory} from 'react-router-dom';
+
 import { ReactComponent as BackLogo } from '../../assets/svgs/back.svg';
 import { ReactComponent as SearchLogo } from '../../assets/svgs/nav-search.svg';
 import { ReactComponent as CartLogo } from '../../assets/svgs/cart.svg';
 
 const Nav = ({ page }) => {
+
+    const history = useHistory();
 
     return (
         <nav className={styles.nav}>
@@ -18,7 +22,7 @@ const Nav = ({ page }) => {
             <div className={styles.cart} style={{visibility: page === 'Carts' ? 'hidden': 'visible'}}>
                  <span><SearchLogo /></span>
 
-                <div className={styles.search}>
+                <div className={styles.search} onClick={()=> history.push('/cart-page')}>
                     <span> <CartLogo /></span>
                     <span className={styles.total}>9</span>
                 </div>
