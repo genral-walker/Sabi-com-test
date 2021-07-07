@@ -1,43 +1,49 @@
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 import styles from './Product.module.css';
 
 import Nav from '../../components/Nav/Nav';
-import productImg from '../../assets/images/cart-1.jpg';
 import HeaderSecondary from '../../components/HeaderSecondary/HeaderSecondary';
 
 import { ReactComponent as ForwardLogo } from '../../assets/svgs/forward.svg';
 import { ReactComponent as StarYellow } from '../../assets/svgs/star-yellow.svg';
 import { ReactComponent as StarLogo } from '../../assets/svgs/star.svg';
 import profile from '../../assets/images/cart-2.jpg';
-import { ReactComponent as CancelLogo } from '../../assets/svgs/cancel.svg'; 
-import ButtonsFooter from '../../components/ButtonsFooter/ButtonsFooter'; 
+import { ReactComponent as CancelLogo } from '../../assets/svgs/cancel.svg';
+import ButtonsFooter from '../../components/ButtonsFooter/ButtonsFooter';
 
 
-const Product = ({ productName }) => {
-       
+const Product = ({ match }) => {
+    const products = useSelector(state => state.cart.products);
+
+    const [product, setProduct] = useState({});
+
+    useEffect(() => {
+        products.forEach(product => product.id === match.params.id && (setProduct(product)));
+    }, [])
+
     return (
         <>
             <Nav page='Details' />
 
             <div className={styles.added}>
-            <p>Item added to cart successfully</p>
-            <CancelLogo />
+                <p>Item added to cart successfully</p>
+                <CancelLogo />
             </div>
 
 
             <section className={styles.image}>
-                <img src={productImg} alt={productName} />
+                <img src={product.image} alt={`${product.title} ${product.name}`} />
             </section>
 
 
             <section className={styles.info}>
-                <p>NIKE Huararche 2019</p>
-                <p>Get comfy and comfortable with the new 2019 designer
-                    sneaker for all your events </p>
+                <p>{product.title} {product.name}</p>
+                <p>{product.description}</p>
 
                 <span>
-                    <h3>N45,000 - N80,000</h3> <span>/Piece</span>
+                    <h3>N{product.price}</h3> <span>/Piece</span>
                 </span>
             </section>
 

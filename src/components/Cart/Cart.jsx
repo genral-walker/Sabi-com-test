@@ -6,10 +6,11 @@ import { useHistory } from 'react-router-dom';
 
 const Cart = (props) => {
 
-    const history = useHistory();
-    const { title, name, description, image, price, stock } = props;
+    const history = useHistory()
+    const { title, name, description, image, price, stock, id } = props;
 
     const [trimmedText, setTrimmedText] = useState();
+
 
     useEffect(() => {
         let str = description.split(' ');
@@ -18,7 +19,7 @@ const Cart = (props) => {
     }, [description])
 
     return (
-        <div className={styles.cart} onClick={() => history.push('/product')}>
+        <div className={styles.cart} id={id} onClick={() => history.push(`/product/${id}`)}>
             <div className={styles.image}>
                 <img src={image} alt={`${title} ${name} Cart Item`} />
             </div>

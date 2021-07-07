@@ -49,7 +49,7 @@ const CartPage = () => {
                 <div>
 
                     {
-                        products.map((product, idx) => idx <= 5 && <Cart {...product} />)
+                        products.map((product, idx) => idx <= 5 && <Cart {...product} key={product.id} />)
                     }
 
                 </div>

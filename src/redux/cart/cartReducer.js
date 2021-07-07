@@ -1,24 +1,19 @@
 
+import { products } from '../../static';
 import cartActionTypes from './cartActionTypes';
+import { } from './cartUtils';
 
-const INITIAL_STATE = [];
-let lastId = 0;
 
-const cartReducer = (state = INITIAL_STATE, action) => {
+const INITIAL_STATE = {
+    products,
+    cartItems: []
 
-    switch (action.type) {
-        case cartActionTypes.BUG_ADDED:
-            return [
-                ...state,
-                {
-                    id: ++lastId,
-                    description: action.payload.description,
-                    resoved: false
-                }
-            ]
+};
 
-        case cartActionTypes.BUG_REMOVED:
-            return state.filter(bug => bug.id !== action.payload.id)
+const cartReducer = (state = INITIAL_STATE, { type, payload }) => {
+
+    switch (type) {
+
         default:
             return state
     }

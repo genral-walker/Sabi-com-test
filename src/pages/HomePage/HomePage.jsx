@@ -76,9 +76,7 @@ const HomePage = () => {
                         <span className={styles.total}>9</span>
                         <p>Cart</p>
                     </div>
-
                 </nav>
-
 
                 <SearchBar />
             </section>
