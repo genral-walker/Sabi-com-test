@@ -12,18 +12,18 @@ import { ReactComponent as Minus } from '../../assets/svgs/minus.svg';
 
 
 
-const CartItem = () => {
+const CartItem = ({ title, name, image, price, id }) => {
 
     return (
-        <div className={styles.body}>
+        <div className={styles.body} id={id}>
 
             <div className={styles.top}>
 
-                <img src={cartFoto} alt='Product Name' />
+                <img src={image} alt={`${title} ${name}`} />
 
                 <div className={styles.text}>
-                    <p>2019 Vintage Coca Cola</p>
-                    <HeaderSecondary>N18,099.09</HeaderSecondary>
+                    <p>{title} {name}</p>
+                    <HeaderSecondary>N{price}</HeaderSecondary>
                 </div>
 
             </div>

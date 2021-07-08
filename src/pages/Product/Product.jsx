@@ -40,7 +40,11 @@ const Product = ({ match }) => {
 
             <section className={styles.info}>
                 <p>{product.title} {product.name}</p>
-                <p>{product.description}</p>
+                <p>
+                    {product.description}
+                    <br />
+                    {product.stock === 1 ? '1 Stock left' : `${product.stock} Stocks left`}.
+                </p>
 
                 <span>
                     <h3>N{product.price}</h3> <span>/Piece</span>

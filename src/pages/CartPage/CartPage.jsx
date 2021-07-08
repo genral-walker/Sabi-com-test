@@ -10,20 +10,31 @@ import HeaderSecondary from '../../components/HeaderSecondary/HeaderSecondary';
 import Btn from '../../components/Btn/Btn';
 import Cart from '../../components/Cart/Cart';
 import Foot from '../../components/Foot/Foot';
+import Header from '../../components/Header/Header';
 
-import { products } from '../../static';
+
+import { useSelector } from 'react-redux';
 
 const CartPage = () => {
 
     const history = useHistory();
+    const products = useSelector(state => state.cart.products);
+    const cartLists = useSelector(state => state.cart.cartItems);
     return (
         <>
             <Nav page='Carts' />
 
             <section className={styles.carts}>
-                <CartItem />
-                <CartItem />
-                <CartItem />
+                {
+                    cartLists.length ?
+                        cartLists.map(obj => <CartItem key={obj.id} {...obj} />) :
+                        <div style={{ margin: '1.5rem auto 2.5rem' }}>
+                            <Header>
+                                No Item in Cart yet.
+                            </Header>
+                        </div>
+                }
+
             </section>
 
             <section className={styles.total}>

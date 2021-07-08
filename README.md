@@ -13,7 +13,9 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 
 Other Unlisted fixes
-- Reset Location;
+- Reset Location
+- Set Limit according to stock
+
 
 <!-- CODE ADD TO CART POPUP and remove popup -->
 <!-- Check on mobile if there's enough space when at bottom -->
