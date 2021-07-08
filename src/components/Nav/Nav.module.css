@@ -27,7 +27,7 @@
     color: var(--color-dark);
 }
 .cart {
-    flex: 0 0 19%;
+    flex: 0 0 22%;
     display: flex;
     justify-content: space-between;
     align-items: center;

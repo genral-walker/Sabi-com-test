@@ -12,7 +12,8 @@
 }
 
 .body > div {
-  margin-top: 16rem;
+  position: fixed;
+  top: 16rem;
 }
 
 .body > div * {
@@ -35,7 +36,7 @@
   width: 95%;
   border-radius: 4px;
   position: fixed;
-  bottom: 3.7rem;
+  bottom: 2.5rem;
 }
 
 .body span {
