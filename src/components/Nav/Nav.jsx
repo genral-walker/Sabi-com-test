@@ -7,10 +7,12 @@ import { useHistory } from 'react-router-dom';
 import { ReactComponent as BackLogo } from '../../assets/svgs/back.svg';
 import { ReactComponent as SearchLogo } from '../../assets/svgs/nav-search.svg';
 import { ReactComponent as CartLogo } from '../../assets/svgs/cart.svg';
+import { useSelector } from 'react-redux';
 
 const Nav = ({ page }) => {
 
     const history = useHistory();
+    const quantity = useSelector(state => state.cart.overallQuantity);
 
     return (
 
@@ -24,7 +26,7 @@ const Nav = ({ page }) => {
 
                 <div className={styles.search} onClick={() => history.push('/cart-page')}>
                     <span> <CartLogo /></span>
-                    <span className={styles.total}>9</span>
+                    <span className={styles.total}>{quantity}</span>
                 </div>
             </div>
         </nav>

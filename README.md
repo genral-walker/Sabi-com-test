@@ -15,11 +15,13 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 Other Edge Cases
 - Reset Location
 - fixed product page reloading issue.
+-- added clause to prevent users from buying if stock is no more avaialble for a product
 
 
 <!-- CODE ADD TO CART POPUP and remove popup -->
 <!-- - Set Limit according to stock -->
 <!-- Check on mobile if there's enough space when at bottom -->
+<!-- whenever you add to cart or when product is out of stock, let the popup show -->
 <!-- Insert a logo in the head tag -->
 <!-- Change the Theme colour to fit the app -->
 <!-- The serach bar should be able to work everywhere else too -->
