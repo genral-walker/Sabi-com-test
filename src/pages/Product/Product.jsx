@@ -20,12 +20,8 @@ const Product = ({ match }) => {
     const [product, setProduct] = useState({});
 
     useEffect(() => {
-        console.log(match.params.id);
         products.forEach(product => product.id === match.params.id && (setProduct(product)));
         console.log(match.params.id);
-       return () => {
-            console.log(match.params.id);
-        }
     }, [])
 
     return (
