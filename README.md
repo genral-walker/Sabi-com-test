@@ -12,12 +12,13 @@ Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 
-Other Unlisted fixes
+Other Edge Cases
 - Reset Location
-- Set Limit according to stock
+- fixed product page reloading issue.
 
 
 <!-- CODE ADD TO CART POPUP and remove popup -->
+<!-- - Set Limit according to stock -->
 <!-- Check on mobile if there's enough space when at bottom -->
 <!-- Insert a logo in the head tag -->
 <!-- Change the Theme colour to fit the app -->
