@@ -23,7 +23,17 @@ const CartPage = () => {
     const totalAmount = useSelector(state => state.cart.totalAmount);
 
 
-    const truncateAmount = amount =>{};
+    const truncateAmount = amount => {
+        let value = `${amount}`;
+        console.log(amount, value);
+        //   18,099.09
+        //000 000 000.00 
+        //15402.380000000001
+        // if there' a unit '.' round up the unit to two and it the the last 3 numbers can be 
+        // rounded for the two... do it.
+        // only after the '.' can we start determining counting tens, hundredss and thousands etc.
+        return amount
+    };
 
     return (
         <>
@@ -48,12 +58,12 @@ const CartPage = () => {
                 <section className={styles.total}>
                     <div>
                         <HeaderSecondary>Subtotal</HeaderSecondary>
-                        <HeaderSecondary>N18,099.09</HeaderSecondary>
+                        <HeaderSecondary>N{truncateAmount(totalAmount)}</HeaderSecondary>
                     </div>
 
                     <div>
                         <HeaderSecondary>Total</HeaderSecondary>
-                        <HeaderSecondary><span>N18,099.09</span></HeaderSecondary>
+                        <HeaderSecondary><span>N{truncateAmount(totalAmount)}</span></HeaderSecondary>
                     </div>
 
                     <span onClick={() => history.push('/checkout')}><Btn type='banner'>Checkout</Btn></span>

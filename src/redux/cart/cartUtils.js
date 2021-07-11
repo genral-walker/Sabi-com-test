@@ -25,8 +25,7 @@ export const addItemToCart = (products, cartLists, productID) => {
         return updatedArray;
 
     } else {
-        let newCartItem;
-        products.forEach(product => product.id === productID && (newCartItem = product));
+        const newCartItem = products.find(product => product.id === productID);
         newCartItem.quantityPurchased = 1;
 
         cartsForQuantityandAmount = [...cartLists, newCartItem];

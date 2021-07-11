@@ -16,7 +16,10 @@ Other Edge Cases
 - Reset Location
 - fixed product page reloading issue.
 -- added clause to prevent users from buying if stock is no more avaialble for a product
+-- added seperate place values for total price.
 
+
+<!-- work on the popup for product and cart page -->
 
 <!-- CODE ADD TO CART POPUP and remove popup -->
 <!-- - Set Limit according to stock -->

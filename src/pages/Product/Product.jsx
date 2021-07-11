@@ -15,14 +15,26 @@ import ButtonsFooter from '../../components/ButtonsFooter/ButtonsFooter';
 
 
 const Product = ({ match }) => {
-    const products = useSelector(state => state.cart.products);
+    const allProducts = useSelector(state => state.cart.products);
+    const cartItems = useSelector(state => state.cart.cartItems);
 
-    const [product, setProduct] = useState({});
+    const product = allProducts.find(product => product.id === match.params.id);
+
+    const isStockAvailabe = product => {
+        if (!product.quantityPurchased) {
+            return `${product.stock} Stocks Left.`;
+        } else if (product.quantityPurchased) {
+            const value = product.stock - product.quantityPurchased;
+            return value === 1 ? `${value} Stock Left.` :
+                value === 0 ? 'No Stock Left.' : `${value} Stocks Left.`;
+        }
+    };
+
+    const [availableStock, setAvailableStock] = useState(() => isStockAvailabe(product));
 
     useEffect(() => {
-        products.forEach(product => product.id === match.params.id && (setProduct(product)));
-        
-    }, [])
+        setAvailableStock(isStockAvailabe(product));
+    }, [cartItems])
 
     return (
         <>
@@ -44,7 +56,7 @@ const Product = ({ match }) => {
                 <p>
                     {product.description}
                     <br />
-                    {product.stock === 1 ? '1 Stock left' : `${product.stock} Stocks left`}.
+                    {availableStock}
                 </p>
 
                 <span>

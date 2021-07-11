@@ -107,6 +107,10 @@
     margin-bottom: 9.5rem;
 }
 
+.profile img {
+  margin-right: 1rem;
+}
+
 .profile h3 {
     font-size: 1.24rem;
     transform: translateY(2px);
