@@ -20,6 +20,12 @@ Other Edge Cases
 
 <!-- CODE ADD TO CART POPUP and remove popup -->
 <!-- - Set Limit according to stock -->
+<!-- whenevr item is added to cart it should show added to cart....
+
+but if the mno more stock it should show no more stock
+ -->
+ <!-- reduce the font size of the cart icon by a px -->
+<!-- add hover to everylink where it needs to be on devices that support hover -->
 <!-- Check on mobile if there's enough space when at bottom -->
 <!-- whenever you add to cart or when product is out of stock, let the popup show -->
 <!-- Insert a logo in the head tag -->

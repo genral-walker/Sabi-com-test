@@ -32,7 +32,7 @@ const HomePage = () => {
     const history = useHistory();
     const filteredProducts = useSelector(state => state.search.filteredProducts);
     const selectedLocation = useSelector(state => state.search.currentLocation);
-    const quantity = useSelector(state => state.cart.overallQuantity);
+    const itemsInCart = useSelector(state => state.cart.totalCartItems);
     const dispatch = useDispatch();
     const selectRef = useRef();
 
@@ -74,7 +74,7 @@ const HomePage = () => {
 
                     <div onClick={() => history.push('/cart-page')}>
                         <span> <CartLogo /></span>
-                        <span className={styles.total}>{quantity}</span>
+                        <span className={styles.total}>{itemsInCart}</span>
                         <p>Cart</p>
                     </div>
                 </nav>

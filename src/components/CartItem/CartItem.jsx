@@ -20,7 +20,7 @@ const CartItem = ({ title, name, image, price, realPrice, id, quantityPurchased 
 
             <div className={styles.top}>
 
-                <img src={image} alt={`${title} ${name}`} />
+                <img src={image} alt={`${name}`} />
 
                 <div className={styles.text}>
                     <p>{title} {name}</p>

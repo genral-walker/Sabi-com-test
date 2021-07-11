@@ -21,6 +21,7 @@ const Product = ({ match }) => {
 
     useEffect(() => {
         products.forEach(product => product.id === match.params.id && (setProduct(product)));
+        
     }, [])
 
     return (

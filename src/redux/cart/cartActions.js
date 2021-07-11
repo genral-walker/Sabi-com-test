@@ -21,6 +21,3 @@ export const deleteProduct = productID => ({
     payload: productID
 });
 
-export const calculateAllQuantity = () => ({
-    type: cartActionTypes.QUANTITY_CALCULATED
-});

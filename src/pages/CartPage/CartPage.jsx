@@ -20,6 +20,10 @@ const CartPage = () => {
     const history = useHistory();
     const products = useSelector(state => state.cart.products);
     const cartLists = useSelector(state => state.cart.cartItems);
+    const totalAmount = useSelector(state => state.cart.totalAmount);
+
+
+    const truncateAmount = amount =>{};
 
     return (
         <>

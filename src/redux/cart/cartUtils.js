@@ -1,4 +1,6 @@
 
+let cartsForQuantityandAmount = [];
+
 export const addItemToCart = (products, cartLists, productID) => {
 
     const itemAlreadyInCart = cartLists.find(cart => cart.id === productID);
@@ -18,12 +20,17 @@ export const addItemToCart = (products, cartLists, productID) => {
             }
         });
 
+        cartsForQuantityandAmount = updatedArray;
+
         return updatedArray;
 
     } else {
         let newCartItem;
         products.forEach(product => product.id === productID && (newCartItem = product));
         newCartItem.quantityPurchased = 1;
+
+        cartsForQuantityandAmount = [...cartLists, newCartItem];
+
         return [...cartLists, newCartItem];
     }
 };
@@ -47,6 +54,8 @@ export const IncrementQuantity = (cartLists, productID) => {
 
     });
 
+    cartsForQuantityandAmount = incrementedCartList;
+
     return incrementedCartList;
 };
 
@@ -66,13 +75,39 @@ export const decrementQuantity = (cartLists, productID) => {
 
     });
 
-    return decrementedCartList.filter(cart => cart.quantityPurchased > 0);
+    const newArray = decrementedCartList.filter(cart => cart.quantityPurchased > 0);
+
+    cartsForQuantityandAmount = newArray;
+
+    return newArray;
 }
 
 
-export const deleteCart = (cartLists, productID) => cartLists.filter(cart => cart.id !== productID);
+export const deleteCart = (cartLists, productID) => {
+    const newArray = cartLists.filter(cart => cart.id !== productID);
 
+    cartsForQuantityandAmount = newArray;
 
-export const calculateOverallQuantity = (cartLists) => {
-    return cartLists.reduce((acummulator, { quantityPurchased }) => acummulator + quantityPurchased, 0)
+    return newArray;
 };
+
+
+export const calculateOverallQuantity = () => {
+    if (cartsForQuantityandAmount.length) {
+        return cartsForQuantityandAmount.reduce((acummulator, { quantityPurchased }) => acummulator + quantityPurchased, 0);
+    } else {
+        return 0
+    }
+};
+
+
+export const calculateOverallPrice = () => {
+    if (cartsForQuantityandAmount.length) {
+        return cartsForQuantityandAmount.reduce((acummulator, { realPrice, price }) => {
+            return acummulator + (realPrice ? realPrice : price)
+        }, 0);
+    } else {
+        return 0
+    }
+};
+

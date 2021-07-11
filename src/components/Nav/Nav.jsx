@@ -13,6 +13,7 @@ const Nav = ({ page }) => {
 
     const history = useHistory();
     const quantity = useSelector(state => state.cart.overallQuantity);
+    const itemsInCart = useSelector(state => state.cart.totalCartItems);
 
     return (
 
@@ -26,7 +27,7 @@ const Nav = ({ page }) => {
 
                 <div className={styles.search} onClick={() => history.push('/cart-page')}>
                     <span> <CartLogo /></span>
-                    <span className={styles.total}>{quantity}</span>
+                    <span className={styles.total}>{itemsInCart}</span>
                 </div>
             </div>
         </nav>
