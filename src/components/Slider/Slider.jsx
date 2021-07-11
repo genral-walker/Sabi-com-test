@@ -22,6 +22,7 @@ const Slider = () => {
                     disableOnInteraction: false,
                 }}
                 pauseOnMouseEnter={true}
+                pauseonmouseenter= 'true'
                 className="mySwiper">
                 <SwiperSlide>
                     <div className={`${styles.slider} ${styles.slide1}`}>

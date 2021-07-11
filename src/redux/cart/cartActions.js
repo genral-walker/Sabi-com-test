@@ -21,3 +21,7 @@ export const deleteProduct = productID => ({
     payload: productID
 });
 
+export const stockFinished = boolean => ({
+    type: cartActionTypes.STOCK_FINISHED,
+    payload: boolean
+})

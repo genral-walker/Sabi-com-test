@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useSelector } from 'react-redux';
 import styles from './Product.module.css';
 
@@ -17,9 +17,13 @@ import ButtonsFooter from '../../components/ButtonsFooter/ButtonsFooter';
 const Product = ({ match }) => {
     const allProducts = useSelector(state => state.cart.products);
     const cartItems = useSelector(state => state.cart.cartItems);
+    const productOutOfStock = useSelector(state => state.cart.outOfStock);
+
+    const alertBoxRef = useRef();
 
     const product = allProducts.find(product => product.id === match.params.id);
 
+    // USED IN UI FOR THE LAST PARAGRAPH OF THE DESCRIPTION.
     const isStockAvailabe = product => {
         if (!product.quantityPurchased) {
             return `${product.stock} Stocks Left.`;
@@ -31,18 +35,35 @@ const Product = ({ match }) => {
     };
 
     const [availableStock, setAvailableStock] = useState(() => isStockAvailabe(product));
+    const [alertBoxClass, setAlertBoxClass] = useState(`${styles.added}`)
+
+    // USED FOR THE POPUP 
+    const updateAlertBoxClass = () => {
+        if (productOutOfStock) {
+            setAlertBoxClass(`${styles.added} ${styles.show}`);
+            setTimeout(() => {
+                setAlertBoxClass(`${styles.added}`)
+            }, 7000);
+        } else {
+            setAlertBoxClass(`${styles.added}`)
+        }
+    };
+
 
     useEffect(() => {
         setAvailableStock(isStockAvailabe(product));
+
+        updateAlertBoxClass();
+
     }, [cartItems])
 
     return (
         <>
             <Nav page='Details' />
 
-            <div className={styles.added}>
+            <div ref={alertBoxRef} className={alertBoxClass}>
                 <p>Item added to cart successfully</p>
-                <CancelLogo />
+                <CancelLogo onClick={() => setAlertBoxClass(`${styles.added}`)} />
             </div>
 
 

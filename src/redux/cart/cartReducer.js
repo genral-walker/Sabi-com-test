@@ -8,7 +8,8 @@ const INITIAL_STATE = {
     products,
     cartItems: [],
     totalCartItems: 0,
-    totalAmount: 0
+    totalAmount: 0,
+    outOfStock: false
 };
 
 const cartReducer = (state = INITIAL_STATE, { type, payload }) => {
@@ -41,6 +42,11 @@ const cartReducer = (state = INITIAL_STATE, { type, payload }) => {
                 cartItems: deleteCart(state.cartItems, payload),
                 totalCartItems: calculateOverallQuantity(),
                 totalAmount: calculateOverallPrice()
+            }
+        case cartActionTypes.STOCK_FINISHED:
+            return {
+                ...state,
+                outOfStock: payload
             }
         default:
             return state

@@ -4,6 +4,7 @@ const cartActionTypes = {
     'CART_INCREMENTED': 'CART_INCREMENTED',
     'CART_DECREMENTED': 'CART_DECREMENTED',
     'CART_DELETED': 'CART_DELETED' ,
+    'STOCK_FINISHED': 'STOCK_FINISHED'
 };
 
 export default cartActionTypes;
