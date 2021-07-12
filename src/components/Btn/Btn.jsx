@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, useParams } from 'react-router-dom';
-import { addToCart, stockFinished } from '../../redux/cart/cartActions';
+import { addToCart, showPopUp, stockFinished } from '../../redux/cart/cartActions';
 import styles from './Btn.module.css';
 
 
@@ -33,8 +33,10 @@ const Btn = ({ children, type, forAddingCart, forCheckOut }) => {
     // USED TO SHOW THE POPUP ONCE NO MORE STOCK AND AFTER A SECOND CLICK ON BTN  
     const [clickCount, setClickCount] = useState(0);
     const disperseFunction = () => {
+
         if (forAddingCart) {
             dispatch(addToCart(params.id));
+            dispatch(showPopUp());
 
             if (product.quantityPurchased === product.stock) {
                 setClickCount(prev => prev + 1);

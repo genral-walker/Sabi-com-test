@@ -24,4 +24,8 @@ export const deleteProduct = productID => ({
 export const stockFinished = boolean => ({
     type: cartActionTypes.STOCK_FINISHED,
     payload: boolean
-})
+});
+
+export const showPopUp = () => ({ type: cartActionTypes.SHOW_POP_UP });
+
+export const hidePopUp = () => ({ type: cartActionTypes.HIDE_POP_UP });

@@ -1,6 +1,6 @@
 
 import React, { useEffect, useRef, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import styles from './Product.module.css';
 
 import Nav from '../../components/Nav/Nav';
@@ -12,12 +12,16 @@ import { ReactComponent as StarLogo } from '../../assets/svgs/star.svg';
 import profile from '../../assets/images/cart-2.jpg';
 import { ReactComponent as CancelLogo } from '../../assets/svgs/cancel.svg';
 import ButtonsFooter from '../../components/ButtonsFooter/ButtonsFooter';
+import { hidePopUp } from '../../redux/cart/cartActions';
 
 
 const Product = ({ match }) => {
     const allProducts = useSelector(state => state.cart.products);
     const cartItems = useSelector(state => state.cart.cartItems);
     const productOutOfStock = useSelector(state => state.cart.outOfStock);
+    const shouldShowAlert = useSelector(state => state.cart.showPopUpOnClick);
+
+    const dispatch = useDispatch();
 
     const alertBoxRef = useRef();
 
@@ -35,34 +39,49 @@ const Product = ({ match }) => {
     };
 
     const [availableStock, setAvailableStock] = useState(() => isStockAvailabe(product));
-    const [alertBoxClass, setAlertBoxClass] = useState(`${styles.added}`)
+    const [alertBoxClass, setAlertBoxClass] = useState(`${styles.added}`);
+    const [alertText, setAlertText] = useState('Item added to cart successfully.');
 
     // USED FOR THE POPUP 
-    const updateAlertBoxClass = () => {
+    const updateAlertBoxData = () => {
         if (productOutOfStock) {
+            setAlertText('Cannot add product. Product out of stock.');
             setAlertBoxClass(`${styles.added} ${styles.show}`);
             setTimeout(() => {
-                setAlertBoxClass(`${styles.added}`)
+                setAlertBoxClass(`${styles.added}`);
             }, 7000);
         } else {
-            setAlertBoxClass(`${styles.added}`)
+            setAlertText('Item added to cart successfully.');
+            setAlertBoxClass(`${styles.added}`);
         }
     };
 
-
+    // UPDATE UI OF PRODUCT STOCK AND ALERT POPUP
     useEffect(() => {
         setAvailableStock(isStockAvailabe(product));
 
-        updateAlertBoxClass();
+        updateAlertBoxData();
 
-    }, [cartItems])
+    }, [cartItems]);
+
+    // TO TRIGGER POPUP ON BTN ADD TO CART CLICK
+    useEffect(() => {
+        if (shouldShowAlert) {
+            setAlertBoxClass(`${styles.added} ${styles.show}`);
+
+            setTimeout(() => {
+                setAlertBoxClass(`${styles.added}`);
+                dispatch(hidePopUp())
+            }, 2500);
+        }
+    }, [shouldShowAlert])
 
     return (
         <>
             <Nav page='Details' />
 
             <div ref={alertBoxRef} className={alertBoxClass}>
-                <p>Item added to cart successfully</p>
+                <p>{alertText}</p>
                 <CancelLogo onClick={() => setAlertBoxClass(`${styles.added}`)} />
             </div>
 

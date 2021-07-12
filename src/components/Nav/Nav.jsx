@@ -12,7 +12,6 @@ import { useSelector } from 'react-redux';
 const Nav = ({ page }) => {
 
     const history = useHistory();
-    const quantity = useSelector(state => state.cart.overallQuantity);
     const itemsInCart = useSelector(state => state.cart.totalCartItems);
 
     return (

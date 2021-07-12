@@ -123,7 +123,7 @@ const HomePage = () => {
                             <div style={{ gridColumn: '1 / -1', margin: '1.5rem auto 2.5rem' }}>
                                 <Header>
                                     <span style={{ marginRight: '1.5rem' }}>Sorry, No Such Product Found 😢</span>
-                                    <span onClick={() => dispatch(refreshProducts())}><Btn type='banner'>OK</Btn></span>
+                                    <span className={styles.okBtn} onClick={() => dispatch(refreshProducts())}><Btn type='banner'>OK</Btn></span>
                                 </Header>
                             </div>
                     }

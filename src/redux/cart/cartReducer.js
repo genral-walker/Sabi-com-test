@@ -9,7 +9,8 @@ const INITIAL_STATE = {
     cartItems: [],
     totalCartItems: 0,
     totalAmount: 0,
-    outOfStock: false
+    outOfStock: false,
+    showPopUpOnClick: false
 };
 
 const cartReducer = (state = INITIAL_STATE, { type, payload }) => {
@@ -47,6 +48,16 @@ const cartReducer = (state = INITIAL_STATE, { type, payload }) => {
             return {
                 ...state,
                 outOfStock: payload
+            }
+        case cartActionTypes.SHOW_POP_UP:
+            return {
+                ...state,
+                showPopUpOnClick: true
+            }
+        case cartActionTypes.HIDE_POP_UP:
+            return {
+                ...state,
+                showPopUpOnClick: false
             }
         default:
             return state
