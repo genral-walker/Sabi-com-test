@@ -11,8 +11,7 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Other Edge Cases
-
+Edge Cases
 - Reset Location
 - Added clause to prevent users from buying if stock is no more avaialble for a product
 <!-- -- added seperate place values for total price. -->

@@ -24,15 +24,17 @@ const CartPage = () => {
 
 
     const truncateAmount = amount => {
-        let value = `${amount}`;
-        console.log(amount, value);
-        //   18,099.09
-        //000 000 000.00 
-        //15402.380000000001
-        // if there' a unit '.' round up the unit to two and it the the last 3 numbers can be 
-        // rounded for the two... do it.
-        // only after the '.' can we start determining counting tens, hundredss and thousands etc.
-        return amount
+        let decimalRounded = amount.toFixed(2);
+        const value = `${decimalRounded}`.split('');
+
+        let dotIndex = value.indexOf('.');
+        while (dotIndex > 2) {
+            dotIndex -= 3;
+            dotIndex && value.splice(dotIndex, 0, ','); //Ensures it doesn't ass a comma when there's nothing at the front.
+            console.log(value, dotIndex)
+        }
+
+        return value
     };
 
     return (
@@ -45,7 +47,7 @@ const CartPage = () => {
                         cartLists.map(obj => <CartItem key={obj.id} {...obj} />) :
                         <div style={{ margin: '1.5rem auto 2.5rem' }}>
                             <Header>
-                                No Item in Cart yet.
+                                No item in cart. Add Item To cart to view your cart.
                             </Header>
                         </div>
                 }

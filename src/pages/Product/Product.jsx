@@ -72,7 +72,7 @@ const Product = ({ match }) => {
             setTimeout(() => {
                 setAlertBoxClass(`${styles.added}`);
                 dispatch(hidePopUp())
-            }, 2500);
+            }, 1500);
         }
     }, [shouldShowAlert])
 
