@@ -123,7 +123,7 @@ export const products = [
         "title": "JERSEY",
         "name": "Puma yeexy x",
         "description": "Apparel product. Comes with warranty and delivery to your destination.",
-        "image": "https://github.com/genral-walker/9ijakids-Game-List/blob/main/src/static/cart-11.jpg?raw=true",
+        "image": nike,
         "location": "abuja",
         "price": 300,
         "stock": 8
@@ -173,7 +173,7 @@ export const products = [
         "title": "COKE",
         "name": "Trarex X20",
         "description": "The new 2019 product yet to see. Flexible and adabtable for anyone and everyone.",
-        "image": "https://github.com/genral-walker/9ijakids-Game-List/blob/main/src/static/cart-11.jpg?raw=true",
+        "image": toyota,
         "location": "delta",
         "price": 14700,
         "stock": 8
