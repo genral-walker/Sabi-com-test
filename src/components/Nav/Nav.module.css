@@ -1,56 +1,68 @@
-
-@import '../../assets/css/utils.css';
+@import "../../assets/css/utils.css";
 
 .nav {
-    padding: 1.2rem 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 1rem;
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
 }
 
 .nav span {
-    padding: .7rem;
-    background: var(--color-svg-2);
-    display: grid;
-    align-items: center;
-    width: max-content;
-    border-radius: 100%;
-    position: relative !important;
+  padding: 0.7rem;
+  background: var(--color-svg-2);
+  display: grid;
+  align-items: center;
+  width: max-content;
+  border-radius: 100%;
+  position: relative !important;
 }
 .nav > span:first-of-type {
-    border-radius: 4px;
-    padding: .6rem .8rem;
+  border-radius: 4px;
+  padding: 0.6rem 0.8rem;
 }
 
 .nav p {
-    color: var(--color-dark);
+  color: var(--color-dark);
 }
 .cart {
-    flex: 0 0 22%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
+  flex: 0 0 22%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.cart > span {
+  margin-left: auto;
 }
 
 .search {
-display: flex;
-align-items: center;
-position: relative;
-right: -10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  right: -10px;
+  margin-left: 1rem;
 }
 
 .search .total {
-    font-size: .95rem;
-    padding: .6px 0 .4rem;
-    width: 16px;
-    height: 16px;
-    text-align: center;
-    border-radius: 100%;
-    background: var(--color-orange);
-    color: var(--color-white);
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
+  font-size: 0.95rem;
+  padding: 0.6px 0 0.4rem;
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  border-radius: 100%;
+  background: var(--color-orange);
+  color: var(--color-white);
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+@media only screen and (min-width: 1500px) {
+  .search .total {
+    width: 25px;
+    height: 25px;
+    padding: 0 0 0.1rem;
+    margin-right: 0.5rem;
+  }
 }

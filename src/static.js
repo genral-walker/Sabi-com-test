@@ -1,4 +1,11 @@
-
+import sandal from './assets/images/sandals.jpg';
+import toyota from './assets/images/toyota.jpg';
+import coke from './assets/images/coke.jpg';
+import nike from './assets/images/nike.jpg';
+import shoe from './assets/images/shoe.jpg';
+import cart3 from './assets/images/cart-3.jpg';
+import cart4 from './assets/images/cart-4.jpg';
+import cart5 from './assets/images/cart-5.jpg';
 
 export const products = [
     {
@@ -6,7 +13,7 @@ export const products = [
         "title": "SANDALS",
         "name": "Trarex Y Undone",
         "description": "Apparel product. Comes with warranty and delivery to your destination.",
-        "image": "https://github.com/genral-walker/9ijakids-Game-List/blob/main/src/static/cart-6.jpg?raw=true",
+        "image": cart4,
         "location": "lagos",
         "price": 1000,
         "stock": 11,
@@ -16,7 +23,7 @@ export const products = [
         "title": "SANDALS",
         "name": "Yexzy 4",
         "description": "Apparel product. Comes with warranty and delivery to your destination.",
-        "image": "https://github.com/genral-walker/9ijakids-Game-List/blob/main/src/static/cart-6.jpg?raw=true",
+        "image": cart5,  
         "location": "abuja",
         "price": 5400,
         "stock": 11,
@@ -46,7 +53,7 @@ export const products = [
         "title": "COKE",
         "name": "Nontanomo expose",
         "description": "Redeine your space with this new product that encompasses all your needs in this space of yours.",
-        "image": "https://github.com/genral-walker/9ijakids-Game-List/blob/main/src/static/cart-10.jpg?raw=true",
+        "image": coke,
         "location": "lagos",
         "price": 3000,
         "stock": 17,
@@ -86,7 +93,7 @@ export const products = [
         "title": "SOCKS",
         "name": "Hulu 12 2017",
         "description": "Get comfy and comfortable with the new 2019 designer.",
-        "image": "https://github.com/genral-walker/9ijakids-Game-List/blob/main/src/static/cart-6.jpg?raw=true",
+        "image": cart3,
         "location": "abuja",
         "price": 750,
         "stock": 26,
@@ -106,7 +113,7 @@ export const products = [
         "title": "HENTRO",
         "name": "Ultra Space Aparthied",
         "description": "The new 2019 product yet to see.",
-        "image": "https://github.com/genral-walker/9ijakids-Game-List/blob/main/src/static/cart-6.jpg?raw=true",
+        "image": shoe,
         "location": "abuja",
         "price": 4300,
         "stock": 18,
@@ -136,7 +143,7 @@ export const products = [
         "title": "HENTRO",
         "name": "Puma yeexy x",
         "description": "Designer sneaker for all your events.",
-        "image": "https://github.com/genral-walker/9ijakids-Game-List/blob/main/src/static/cart-10.jpg?raw=true",
+        "image": sandal,
         "location": "kano",
         "price": 4000,
         "stock": 34,
@@ -146,7 +153,7 @@ export const products = [
         "title": "PUMA",
         "name": "Beever Ultimate",
         "description": "The new 2019 product yet to see. Comes with a see through and non see-through choices to suit your needs.",
-        "image": "https://github.com/genral-walker/9ijakids-Game-List/blob/main/src/static/cart-6.jpg?raw=true",
+        "image": cart3,
         "location": "kano",
         "price": 370,
         "stock": 28,

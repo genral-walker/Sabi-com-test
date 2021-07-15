@@ -31,7 +31,21 @@
   background: #e2e9f031;
   padding: 2rem 3rem;
 }
-
+@media only screen and (min-width: 500px) {
+  .image {
+    height: 40rem;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .image {
+    height: 46rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .image {
+    height: 53rem;
+  }
+}
 
 .image img {
   width: 100%;

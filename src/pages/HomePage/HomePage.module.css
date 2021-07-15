@@ -9,11 +9,14 @@
   justify-content: space-between;
   align-items: center;
 }
-.headNav div {
+.headNav > div {
   flex: 0 0 33%;
   padding: 0 1rem 0 1.5rem;
   display: flex;
   align-items: center;
+}
+.headNav > div * {
+  cursor: pointer;
 }
 
 .headNav div p,
@@ -54,6 +57,14 @@
   position: absolute;
   bottom: 10px;
   right: 10px;
+}
+@media only screen and (min-width: 1500px) {
+  .headNav .total {
+    width: 25px;
+    height: 25px;
+    padding: 0 0 .1rem;
+    margin-right: .5rem;
+  }
 }
 
 .headNav .total + p {

@@ -75,6 +75,7 @@ const Product = ({ match }) => {
             }, 1500);
         }
     }, [shouldShowAlert])
+    
 
     return (
         <>

@@ -14,7 +14,7 @@ const Cart = (props) => {
 
     useEffect(() => {
         let str = description.split(' ');
-        let newText = str.length <= 6 ? str.join(' ') + '.' : str.splice(0, 6).join(' ') + '...';
+        let newText = str.length <= 5 ? str.join(' ') + '.' : str.splice(0, 5).join(' ') + '...';
         setTrimmedText(newText);
     }, [description])
 
@@ -24,7 +24,7 @@ const Cart = (props) => {
                 <img src={image} alt={`${title} ${name} Cart Item`} />
             </div>
             <div className={styles.details}>
-                <p>{trimmedText}</p>
+                <p>{title}. {trimmedText}</p>
                 <h3>₦{price}</h3>
                 <p>MOQ {stock} (pieces)</p>
             </div>
